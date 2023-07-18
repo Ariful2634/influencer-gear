@@ -94,8 +94,8 @@ section{
     justify-content: center;
     align-items: center;
     border: 1px solid #ddd;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
     padding: 20px;
 }
 
@@ -106,13 +106,15 @@ section{
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
-    width: 329px;
+    width: 90%;
     height: 476px;
     padding: 15px;
+    gap: 15px;
 
 }
 .card-img img{
     width: 100%;
+    height: 256px;
     
 }
 .card-img h3{
@@ -137,7 +139,7 @@ section{
 .card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
+    row-gap: 20px;
     column-gap: 20px;
     justify-content: center;
 }
@@ -147,6 +149,39 @@ section{
 }
 
 
+/*featured section*/
+
+.featured{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    flex-direction: row-reverse;
+}
+.featured-img img{
+    border-radius: 7px;
+}
+
+.featured-text{
+    width: 50%;
+}
+.featured-text h2{
+    color: #0A0826;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.featured-text p{
+    color: #6C6C6C;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.featured-text button{
+    background: #E02C6D;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 15px;
+    border: 0;
+}
 
 
 
@@ -155,9 +190,9 @@ section{
 /* small device*/
 
 @media screen and (max-width:576px) {
-    nav, .journey{
+    nav, .journey, .featured{
         flex-direction: column;
-        overflow-x: hidden;
+        overflow: hidden;
         
         
     }
@@ -180,6 +215,9 @@ section{
     .social-img{
         flex-wrap: wrap;
         gap: 20px;
+        border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+        
     }
     .social-img img{
         width: 60px;
@@ -188,10 +226,28 @@ section{
         grid-template-columns: 1fr;
        
         overflow: hidden;
+      
         
     }
     .card-img{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        padding-top: 15px;
+        
+    }
+    .card-img img{
         width: 90%;
+        margin-top: auto;
+       
+    }
+    .featured-text{
+        width: 100%;
+        text-align: center;
+    
+    }
+    .featured{
+        gap: 45px;
     }
 
 }
